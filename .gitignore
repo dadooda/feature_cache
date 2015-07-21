@@ -1,0 +1,9 @@
+# General Ruby, sorted by first letter.
+/.bundle/
+/doc/*
+/.rspec
+/vendor/bundle/
+/.yardoc/
+
+# Sub-specific.
+/vendor/subs/
