@@ -31,7 +31,7 @@ class Person
 end
 ```
 
-Full documentation is available at [rubydoc.info](http://www.rubydoc.info/github/dadooda/feature-cache/master/Feature/Cache).
+Full documentation is available at [rubydoc.info](http://www.rubydoc.info/github/dadooda/feature_cache/master/Feature/Cache).
 
 
 Installation
