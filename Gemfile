@@ -1,10 +1,15 @@
 
 source "https://rubygems.org"
 
-# Gems required for the project using this sub.
+# Gems required for sub production usage.
 # none yet
 
-# Gems required for sub development and testing.
+# Gems required for sub stand-alone development.
 group :development do
   gem "rspec"
+
+  # YARD and friends.
+  gem "rdoc"
+  gem "redcarpet"
+  gem "yard"
 end

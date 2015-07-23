@@ -2,12 +2,40 @@
 module Feature
   # Provide simple value caching through the <tt>cache</tt> private method.
   #
+  #   require "feature/cache"
+  #
+  #   class Person
+  #     Feature::Cache.load(self)
+  #
+  #     attr_reader :first_name
+  #     attr_reader :last_name
+  #
+  #     def full_name
+  #       # This value is cached.
+  #       cache[:full_name] ||= "#{first_name} #{last_name}"
+  #     end
+  #
+  #     def first_name=(s)
+  #       cache.clear
+  #       @first_name = s
+  #     end
+  #
+  #     def last_name=(s)
+  #       cache.clear
+  #       @last_name = s
+  #     end
+  #   end
+  #
+  # @see Cache.load
   # @see DefaultMode::InstanceMethods#cache
   module Cache
     # Activate feature.
     #
     #   class Klass
+    #     # Default mode.
     #     Feature::Cache.load(self)                       # Default mode.
+    #
+    #     # Invisible mode. Cache will be hidden from `.inspect`.
     #     Feature::Cache.load(self, invisible: true)      # Invisible mode.
     #
     #     ...
@@ -32,7 +60,7 @@ module Feature
       module InstanceMethods
         private
 
-        # On-demand cache container.
+        # A <tt>Hash</tt> collection of cached values.
         #
         # Using the cache:
         #
@@ -42,13 +70,12 @@ module Feature
         #
         # Clearing the cache:
         #
-        #   def first_name=(value)
+        #   def first_name=(s)
         #     cache.clear
-        #     @first_name = value
+        #     @first_name = s
         #   end
         #
-        # NOTE: It is <b>not recommended</to to clear individual keys with <tt>cache.delete</tt>.
-        #       If you change anything related to the cache -- clear it all.
+        # NOTE: It is <b>not recommended</b> to to clear individual cache keys. If you change anything which affects the cache -- clear it all.
         def cache
           @cache ||= {}
         end
