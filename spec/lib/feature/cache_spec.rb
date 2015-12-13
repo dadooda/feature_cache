@@ -1,6 +1,4 @@
 
-require "spec_helper"
-
 require "feature/cache"
 
 describe Feature::Cache do

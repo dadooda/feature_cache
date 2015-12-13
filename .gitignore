@@ -4,6 +4,3 @@
 /.rspec
 /vendor/bundle/
 /.yardoc/
-
-# Sub-specific.
-/vendor/subs/
