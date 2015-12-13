@@ -33,13 +33,13 @@ class Person
 end
 ```
 
-Full documentation is available at [rubydoc.info](http://www.rubydoc.info/github/dadooda/feature_cache/master/Feature/Cache).
+Full documentation is available at [rubydoc.info](http://www.rubydoc.info/github/dadooda/feature_cache/Feature/Cache).
 
 
-Installation
-------------
+Setup
+-----
 
-This project is a *sub*. For info on installing subs, click [here](https://github.com/dadooda/subs#installation).
+This project is a *sub*. Sub setup example is available [here](https://github.com/dadooda/subs#setup).
 
 For more info on subs, click [here](https://github.com/dadooda/subs).
 
