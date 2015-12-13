@@ -1,6 +1,8 @@
 
-Feature::Cache: Simple value caching for a class
-================================================
+Feature::Cache
+==============
+
+Simple value caching for a class
 
 Overview
 --------
